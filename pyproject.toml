@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arctos-studio-mcp"
+version = "0.1.0"
+description = "Connect a local MCP client to the Arctos Studio robot simulator"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+dependencies = ["PyQt5>=5.15.10,<6"]
+keywords = ["arctos", "mcp", "robotics", "simulation"]
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+"Arctos Studio" = "https://arctosrobotics.com/product/arctos-studio-2/"
+
+[project.scripts]
+arctos-studio-mcp = "arctos_studio_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
